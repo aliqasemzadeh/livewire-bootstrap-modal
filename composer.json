@@ -1,0 +1,34 @@
+{
+    "name": "alighasemzadeh/livewire-bootstrap-modal",
+    "homepage": "https://github.com/alighasemzadeh/livewire-bootstrap-modal",
+    "description": "Dynamic Laravel Livewire Bootstrap modals.",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kevin Dion",
+            "email": "bastinald@icloud.com",
+            "role": "Developer"
+        },
+        {
+            "name": "Ali Ghasemzadeh",
+            "email": "alighasemzadeh.dev@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "laravel/framework": "^9.0",
+        "livewire/livewire": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "AliGhasemzadeh\\LaravelLivewireModals\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AliGhasemzadeh\\LaravelLivewireModals\\Providers\\LaravelLivewireModalsProvider"
+            ]
+        }
+    }
+}
