@@ -13,7 +13,7 @@ class Modals extends Component
 
     public function render()
     {
-        return view('laravel-livewire-modals::modals');
+        return view('livewire-bootstrap-modal::modals');
     }
 
     public function showModal($alias, ...$params)

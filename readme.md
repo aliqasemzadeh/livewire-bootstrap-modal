@@ -24,7 +24,7 @@ This package allows you to dynamically show your Laravel Livewire components ins
 Require the package:
 
 ```console
-composer require bastinald/laravel-livewire-modals
+composer require alighasemzadeh/livewire-bootstrap-modal
 ```
 
 Add the `livewire:modals` component to your app layout view:
@@ -35,12 +35,12 @@ Add the `livewire:modals` component to your app layout view:
 <script src="{{ asset('js/app.js') }}"></script>
 ```
 
-Require `../../vendor/bastinald/laravel-livewire-modals/resources/js/modals` in your app javascript file:
+Require `../../vendor/alighasemzadeh/livewire-bootstrap-modal/resources/js/modals` in your app javascript file:
 
 ```javascript
 require('@popperjs/core');
 require('bootstrap');
-require('../../vendor/bastinald/laravel-livewire-modals/resources/js/modals');
+require('../../vendor/alighasemzadeh/livewire-bootstrap-modal/resources/js/modals');
 ```
 
 ## Usage
@@ -159,7 +159,7 @@ public function save()
 Use your own modals view by publishing the package view:
 
 ```console
-php artisan vendor:publish --tag=laravel-livewire-modals:views
+php artisan vendor:publish --tag=livewire-bootstrap-modal:views
 ```
 
-Now edit the view file inside `resources/views/vendor/laravel-livewire-modals`. The package will use this view to render the component.
+Now edit the view file inside `resources/views/vendor/livewire-bootstrap-modal`. The package will use this view to render the component.

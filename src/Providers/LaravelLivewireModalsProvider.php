@@ -10,11 +10,11 @@ class LaravelLivewireModalsProvider extends ServiceProvider
 {
     public function boot()
     {
-        $this->loadViewsFrom(__DIR__ . '/../../resources/views', 'laravel-livewire-modals');
+        $this->loadViewsFrom(__DIR__ . '/../../resources/views', 'livewire-bootstrap-modal');
 
         $this->publishes(
-            [__DIR__ . '/../../resources/views' => resource_path('views/vendor/laravel-livewire-modals')],
-            ['laravel-livewire-modals', 'laravel-livewire-modals:views']
+            [__DIR__ . '/../../resources/views' => resource_path('views/vendor/livewire-bootstrap-modal')],
+            ['livewire-bootstrap-modal', 'livewire-bootstrap-modal:views']
         );
 
         Livewire::component('modals', Modals::class);
