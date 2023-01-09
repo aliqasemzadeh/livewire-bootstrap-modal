@@ -40,7 +40,7 @@ Require `../../vendor/aliqasemzadeh/livewire-bootstrap-modal/resources/js/modals
 ```javascript
 require('@popperjs/core');
 require('bootstrap');
-require('../../vendor/alighasemzadeh/livewire-bootstrap-modal/resources/js/modals');
+require('../../vendor/aliqasemzadeh/livewire-bootstrap-modal/resources/js/modals');
 ```
 
 ## Usage
