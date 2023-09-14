@@ -16,7 +16,6 @@ class Modals extends Component
         return view('livewire-bootstrap-modal::modals');
     }
 
-    #[On('showModal')]
     public function showModal($alias, ...$params)
     {
         $this->alias = $alias;

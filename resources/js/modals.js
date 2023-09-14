@@ -2,7 +2,11 @@ import {Modal} from 'bootstrap';
 
 let modalsElement = document.getElementById('livewire-bootstrap-modal');
 
-document.addEventListener('showModal', () => {
+modalsElement.addEventListener('hidden.bs.modal', () => {
+    Livewire.emit('resetModal');
+});
+
+Livewire.on('showBootstrapModal', () => {
     let modal = Modal.getInstance(modalsElement);
 
     if (!modal) {
@@ -12,17 +16,7 @@ document.addEventListener('showModal', () => {
     modal.show();
 });
 
-document.addEventListener('showModal', () => {
-    let modal = Modal.getInstance(modalsElement);
-
-    if (!modal) {
-        modal = new Modal(modalsElement);
-    }
-
-    modal.show();
-});
-
-modalsElement.addEventListener('hideModal', () => {
+Livewire.on('hideModal', () => {
     let modal = Modal.getInstance(modalsElement);
 
     modal.hide();
