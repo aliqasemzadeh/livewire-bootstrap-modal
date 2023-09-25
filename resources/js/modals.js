@@ -3,10 +3,10 @@ import {Modal} from 'bootstrap';
 let modalsElement = document.getElementById('livewire-bootstrap-modal');
 
 modalsElement.addEventListener('hidden.bs.modal', () => {
-    Livewire.emit('resetModal');
+    @this.dispatch('resetModal');
 });
 
-Livewire.on('showBootstrapModal', () => {
+@this.on('showBootstrapModal', () => {
     let modal = Modal.getInstance(modalsElement);
 
     if (!modal) {
@@ -16,7 +16,7 @@ Livewire.on('showBootstrapModal', () => {
     modal.show();
 });
 
-Livewire.on('hideModal', () => {
+@this.on('hideModal', () => {
     let modal = Modal.getInstance(modalsElement);
 
     modal.hide();
