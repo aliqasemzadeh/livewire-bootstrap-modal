@@ -1,8 +1,8 @@
 <?php
 
-namespace AliQasemzadeh\LaravelLivewireModals\Providers;
+namespace MozhuLungdsuo\LaravelLivewireModals\Providers;
 
-use AliQasemzadeh\LaravelLivewireModals\Components\Modals;
+use MozhuLungdsuo\LaravelLivewireModals\Components\Modals;
 use Illuminate\Support\ServiceProvider;
 use Livewire\Livewire;
 

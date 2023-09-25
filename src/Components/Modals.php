@@ -1,6 +1,6 @@
 <?php
 
-namespace AliQasemzadeh\LaravelLivewireModals\Components;
+namespace MozhuLungdsuo\LaravelLivewireModals\Components;
 
 use Livewire\Component;
 use Livewire\Attributes\On; 
