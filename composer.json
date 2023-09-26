@@ -1,6 +1,6 @@
 {
-    "name": "mozhulungdsuo/livewire-bootstrap-modal",
-    "homepage": "https://github.com/mozhulungdsuo/livewire-bootstrap-modal",
+    "name": "mozhuilungdsuo/livewire-bootstrap-modal",
+    "homepage": "https://github.com/mozhuilungdsuo/livewire-bootstrap-modal",
     "description": "Dynamic Laravel Livewire Bootstrap modals.",
     "license": "MIT",
     "authors": [
@@ -17,13 +17,13 @@
     },
     "autoload": {
         "psr-4": {
-            "MozhuLungdsuo\\LaravelLivewireModals\\": "src"
+            "MozhuiLungdsuo\\LaravelLivewireModals\\": "src"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "MozhuLungdsuo\\LaravelLivewireModals\\Providers\\LaravelLivewireModalsProvider"
+                "MozhuiLungdsuo\\LaravelLivewireModals\\Providers\\LaravelLivewireModalsProvider"
             ]
         }
     }
