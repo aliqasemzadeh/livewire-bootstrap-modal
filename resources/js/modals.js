@@ -1,23 +1,21 @@
-import {Modal} from 'bootstrap';
+// import {Modal} from 'bootstrap';
 
 let modalsElement = document.getElementById('livewire-bootstrap-modal');
 
 modalsElement.addEventListener('hidden.bs.modal', () => {
-    @this.dispatch('resetModal');
+    Livewire.dispatch('resetModal');
 });
 
-@this.on('showBootstrapModal', () => {
-    let modal = Modal.getInstance(modalsElement);
 
-    if (!modal) {
-        modal = new Modal(modalsElement);
-    }
+Livewire.on('showBootstrapModal', () => {
 
+    let modal = bootstrap.Modal.getOrCreateInstance(modalsElement);
     modal.show();
+    console.log('showBootstrapModal');
 });
 
-@this.on('hideModal', () => {
-    let modal = Modal.getInstance(modalsElement);
+Livewire.on('hideModal', () => {
+    let modal = bootstrap.Modal.getInstance(modalsElement);
 
     modal.hide();
 });
