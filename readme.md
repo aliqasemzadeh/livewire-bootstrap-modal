@@ -20,15 +20,6 @@ This package allows you to dynamically show your Laravel Livewire components ins
 - Bootstrap 5 must be installed via webpack first
 
 ## Installation
-Add the following to composer.json 
-```
-"repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/mozhulungdsuo/livewire-bootstrap-modal"
-        }
-    ],
-```    
 
 
 Require the package:
