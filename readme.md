@@ -48,9 +48,9 @@ Add the `livewire:modals` component to your app layout view:
 Require `../../vendor/mozhulungdsuo/livewire-bootstrap-modal/resources/js/modals` in your app javascript file:
 
 ```javascript
-require('@popperjs/core');
-require('bootstrap');
-require('../../vendor/mozhulungdsuo/livewire-bootstrap-modal/resources/js/modals');
+import('@popperjs/core');
+import '../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js';
+import '../../vendor/mozhulungdsuo/livewire-bootstrap-modal/resources/js/modals.js';
 ```
 
 ## Usage
@@ -64,13 +64,13 @@ Make a Livewire component you want to show as a modal. The view for this compone
     <div class="modal-content">
         <div class="modal-header">
             <h5 class="modal-title">Modal title</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <button type="button" class="btn-close" wire:click="$dispatch('hideModal')" aria-label="Close"></button>
         </div>
         <div class="modal-body">
             <p>Modal body text goes here.</p>
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-secondary"  wire:click="$dispatch('hideModal')">Close</button>
             <button type="button" class="btn btn-primary">Save changes</button>
         </div>
     </div>
@@ -82,7 +82,7 @@ Make a Livewire component you want to show as a modal. The view for this compone
 Show a modal by emitting the `showModal` event with the component alias:
 
 ```html
-<button type="button" wire:click="$dispatch('showModal',{alias:'auth.profile-update'})">
+<button type="button" wire:click="$dispatch('showModal', ['alias' => 'modals.testmodals')">
     {{ __('Update Profile') }}
 </button>
 ```
@@ -92,7 +92,7 @@ Show a modal by emitting the `showModal` event with the component alias:
 Pass parameters to the component `mount` method after the alias:
 
 ```html
-<button type="button"wire:click="$dispatch('showModal',{alias:'auth.profile-update',data:'{{$user->id}}'})">
+<button type="button"wire:click="$dispatch('showModal', ['alias' => 'modals.testmodals', 'params' => ['name' => 'test']])">
     {{ __('Update User #' . $user->id) }}
 </button>
 ```
@@ -126,25 +126,18 @@ class Update extends Component
 Hide the currently open modal by emitting the `hideModal` event:
 
 ```html
-<button type="button" wire:click="$emit('hideModal')">
+<button type="button" wire:click="$dispatch('hideModal')">
     {{ __('Close') }}
 </button>
 ```
 
-Or by using the Bootstrap `data-bs-dismiss` attribute:
-
-```html
-<button type="button" data-bs-dismiss="modal">
-    {{ __('Close') }}
-</button>
-```
 
 ### Emitting Events
 
 You can emit events inside your views:
 
 ```html
-<button type="button" wire:click="$disptach('hideModal')">
+<button type="button" wire:click="$dispatch('hideModal')">
     {{ __('Close') }}
 </button>
 ```
@@ -158,7 +151,7 @@ public function save()
 
     // save the record
 
-    $this->emit('hideModal');
+    $this->dispatch('hideModal');
 }
 ```
 

@@ -5,15 +5,11 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Kevin Dion",
-            "email": "bastinald@icloud.com",
-            "role": "Developer"
-        },
-        {
-            "name": "Ali Qasemzadeh",
-            "email": "alighasemzadeh.dev@gmail.com",
+            "name": "Lungdsuo Mozhui",
+            "email": "mozhui.lungdsuo@gmail.com",
             "role": "Developer"
         }
+       
     ],
     "require": {
         "laravel/framework": "^8.0|^9.0|^10.0",
