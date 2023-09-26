@@ -2,6 +2,7 @@
 
 namespace MozhuLungdsuo\LaravelLivewireModals\Components;
 
+use Illuminate\Support\Facades\Log;
 use Livewire\Component;
 use Livewire\Attributes\On; 
 
@@ -17,10 +18,13 @@ class Modals extends Component
         return view('livewire-bootstrap-modal::modals');
     }
     #[On('showModal')]
-    public function showModal($alias, ...$params)
-    {
+    public function showModal($alias,$params = []){
+   
+       
+
         $this->alias = $alias;
         $this->params = $params;
+
 
         $this->dispatch('showBootstrapModal');
     }
