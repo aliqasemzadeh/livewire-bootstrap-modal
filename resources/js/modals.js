@@ -15,8 +15,12 @@ Livewire.on('showBootstrapModal', (e) => {
     modal.show();
 });
 
-Livewire.on('hideModal', () => {
-    $('.modal-backdrop').remove();
-    $('.modal').remove();
-     
+Livewire.on('hideModal', function() {
+    document.querySelectorAll('.modal-backdrop').forEach(function(element) {
+        element.remove();
+    });
+    document.querySelectorAll('.modal').forEach(function(element) {
+        element.remove();
+    });
+    Livewire.dispatch('resetModal');
 });
