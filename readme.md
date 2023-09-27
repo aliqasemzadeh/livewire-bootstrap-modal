@@ -53,8 +53,8 @@ import '../../vendor/mozhuilungdsuo/livewire-bootstrap-modal/resources/js/modals
 Make a Livewire component you want to show as a modal. The view for this component must use the Bootstrap `modal-dialog` container:
 
 ```html
-<div class="modal-dialog">
-    <div class="modal-content">
+<div>
+
         <div class="modal-header">
             <h5 class="modal-title">Modal title</h5>
             <button type="button" class="btn-close" wire:click="$dispatch('hideModal')" aria-label="Close"></button>
@@ -66,8 +66,8 @@ Make a Livewire component you want to show as a modal. The view for this compone
             <button type="button" class="btn btn-secondary"  wire:click="$dispatch('hideModal')">Close</button>
             <button type="button" class="btn btn-primary">Save changes</button>
         </div>
-    </div>
-</div>
+        </div>
+ 
 ```
 
 ### Showing Modals

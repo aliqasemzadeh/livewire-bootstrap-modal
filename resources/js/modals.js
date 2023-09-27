@@ -7,20 +7,16 @@ modalsElement.addEventListener('hidden.bs.modal', () => {
 });
 
 Livewire.on('showBootstrapModal', (e) => {
-    let modal = Modal.getOrCreateInstance(modalsElement, {
-        backdrop: 'static',
-        keyboard: true,
-        focus: true,
-    });
+    let modal = Modal.getOrCreateInstance(modalsElement)
     modal.show();
+  
 });
 
-Livewire.on('hideModal', function() {
-    document.querySelectorAll('.modal-backdrop').forEach(function(element) {
-        element.remove();
-    });
-    document.querySelectorAll('.modal').forEach(function(element) {
-        element.remove();
-    });
+Livewire.on('hideModal', () => {
+    let modal = Modal.getInstance(modalsElement);
+    modal.hide();
+   ;
     Livewire.dispatch('resetModal');
+
+
 });
