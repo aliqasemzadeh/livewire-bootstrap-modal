@@ -1,6 +1,8 @@
 # Laravel Livewire Modals
 
-This package allows you to dynamically show your Laravel Livewire components inside Bootstrap modals.
+This package allows you to dynamically show your Laravel Livewire 3 components inside Bootstrap modals.
+
+ **Warning:** This package is not backward compatible with Livewire 2.
 
 ## Documentation
 
