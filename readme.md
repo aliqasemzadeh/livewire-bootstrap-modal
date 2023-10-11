@@ -75,7 +75,7 @@ Make a Livewire component you want to show as a modal. The view for this compone
 Show a modal by emitting the `showModal` event with the component alias:
 
 ```html
-<button type="button" wire:click="$dispatch('showModal', ['alias' => 'modals.testmodals')">
+<button type="button" wire:click="$dispatch('showModal', ['alias' => 'testmodals')">
     {{ __('Update Profile') }}
 </button>
 ```
@@ -85,7 +85,7 @@ Show a modal by emitting the `showModal` event with the component alias:
 Pass parameters to the component `mount` method after the alias:
 
 ```html
-<button type="button"wire:click="$dispatch('showModal', ['alias' => 'modals.testmodals', 'params' => ['name' => 'test']])">
+<button type="button"wire:click="$dispatch('showModal', ['alias' => 'testmodals', 'params' => ['name' => 'test']])">
     {{ __('Update User #' . $user->id) }}
 </button>
 ```
