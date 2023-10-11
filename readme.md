@@ -66,7 +66,7 @@ Make a Livewire component you want to show as a modal. The view for this compone
             <button type="button" class="btn btn-secondary"  wire:click="$dispatch('hideModal')">Close</button>
             <button type="button" class="btn btn-primary">Save changes</button>
         </div>
-        </div>
+</div>
  
 ```
 
