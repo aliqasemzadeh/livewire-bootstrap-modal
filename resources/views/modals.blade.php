@@ -4,9 +4,7 @@
         <div class="modal-content">
             @if ($alias)
                 @livewire($alias, $params, key($activemodal))
-             
             @endif
         </div>
     </div>
-
 </div>
