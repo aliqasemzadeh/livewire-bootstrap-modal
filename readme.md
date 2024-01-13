@@ -19,7 +19,11 @@ This package allows you to dynamically show your Laravel Livewire 3 components i
 
 ## Requirements
 
-- Bootstrap 5 must be installed via webpack first
+- Bootstrap 5 must be installed via npm first
+```console
+npm install bootstrap
+npm install @popperjs/core
+```
 
 ## Installation
 
