@@ -3,7 +3,7 @@
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
             @if ($alias)
-                @livewire($alias, $params, key($activemodal))
+                @livewire($alias, $params, key($activeModal))
             @endif
         </div>
     </div>

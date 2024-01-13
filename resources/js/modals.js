@@ -6,7 +6,7 @@ modalsElement.addEventListener('hidden.bs.modal', () => {
     Livewire.dispatch('resetModal');
 });
 
-Livewire.on('showModal', (e) => {
+Livewire.on('showBootstrapModal', (e) => {
     let modal = Modal.getOrCreateInstance(modalsElement)
     modal.show();
 });

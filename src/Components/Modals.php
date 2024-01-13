@@ -10,15 +10,15 @@ class Modals extends Component
 {
     public $alias;
     public $params = [];
-    public $activemodal;
+    public $activeModal;
 
     #[On('showModal')]
     public function showModal($data)
     {
         $this->alias = $data['alias'];
         $this->params = $data['params'] ?? [];
-        $this->activemodal = rand();
-        $this->dispatch('showModal');
+        $this->activeModal = "modal-id-" . rand();
+        $this->dispatch('showBootstrapModal');
     }
 
     #[On('resetModal')]

@@ -19,7 +19,7 @@ This package allows you to dynamically show your Laravel Livewire 3 components i
 
 ## Requirements
 
-- Bootstrap 5 must be installed via npm first
+- Bootstrap 5 and PopperJS must be installed via npm first
 ```console
 npm install bootstrap
 npm install @popperjs/core
@@ -58,7 +58,6 @@ Make a Livewire component you want to show as a modal. The view for this compone
 
 ```html
 <div>
-
         <div class="modal-header">
             <h5 class="modal-title">Modal title</h5>
             <button type="button" class="btn-close" wire:click="$dispatch('hideModal')" aria-label="Close"></button>
@@ -79,7 +78,7 @@ Make a Livewire component you want to show as a modal. The view for this compone
 Show a modal by emitting the `showModal` event with the component alias:
 
 ```html
-<button type="button" wire:click="$dispatch('showModal', ['alias' => 'modalName'])">
+<button type="button" wire:click="$dispatch('showModal', {data: {'alias' : 'livewire.modal.user','params' :{'user':'Ali Qasemzadeh'}}})">
     {{ __('Update Profile') }}
 </button>
 ```
@@ -89,7 +88,7 @@ Show a modal by emitting the `showModal` event with the component alias:
 Pass parameters to the component `mount` method after the alias:
 
 ```html
-<button type="button"wire:click="$dispatch('showModal', ['alias' => 'modalName', 'params' => ['name' => 'test']])">
+<button type="button"wire:click="$dispatch('showModal', {data: {'alias' : 'livewire.modal.user','params' :{'user':'Ali Qasemzadeh'}}})">
     {{ __('Update User #' . $user->id) }}
 </button>
 ```
