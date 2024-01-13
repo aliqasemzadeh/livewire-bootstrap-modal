@@ -13,7 +13,7 @@ This package allows you to dynamically show your Laravel Livewire 3 components i
     - [Showing Modals](#showing-modals)
     - [Mount Parameters](#mount-parameters)
     - [Hiding Modals](#hiding-modals)
-    - [Emitting Events](#emitting-events)
+    - [Dispatching Modals](#dispatching-modals)
 - [Publishing Assets](#publishing-assets)
     - [Custom View](#custom-view)
 
@@ -125,7 +125,7 @@ Hide the currently open modal by emitting the `hideModal` event:
 ```
 
 
-### Emitting Events
+### Dismissing Modals
 
 You can emit events inside your views:
 
