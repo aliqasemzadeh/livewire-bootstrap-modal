@@ -16,6 +16,7 @@ This package allows you to dynamically show your Laravel Livewire 3 components i
     - [Dispatching Modals](#dispatching-modals)
 - [Publishing Assets](#publishing-assets)
     - [Custom View](#custom-view)
+- [Notes](#notes)
 
 ## Requirements
 
@@ -162,3 +163,11 @@ php artisan vendor:publish --tag=livewire-bootstrap-modal:views
 ```
 
 Now edit the view file inside `resources/views/vendor/livewire-bootstrap-modal`. The package will use this view to render the component.
+
+
+
+## Notes
+
+1- You should use button or @click in main slot.
+2- We are working hard on some problems, We hope fix them soon.
+3- We will add some options soon.
