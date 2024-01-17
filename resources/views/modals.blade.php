@@ -1,5 +1,10 @@
-<div class="modal" id="livewire-bootstrap-modal" tabindex="-1" aria-hidden="true" wire:ignore.self>
-        @if ($alias)
-            @livewire($alias, $params, key($activeModal))
-        @endif
+<div class="modal" data-bs-backdrop="static" data-bs-keyboard="false" id="livewire-bootstrap-modal" tabindex="-1"
+     aria-hidden="true" style="z-index: 9999;" wire:ignore.self>
+    <div class="modal-dialog">
+        <div class="modal-content">
+            @if ($alias)
+                @livewire($alias, $params, key($activeModal))
+            @endif
+        </div>
+    </div>
 </div>
