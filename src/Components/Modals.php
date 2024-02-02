@@ -17,7 +17,9 @@ class Modals extends Component
     public function showModal($data)
     {
         $this->alias = $data['alias'];
-        $this->size = $data['size'];
+        if(isset($data['size'])) {
+            $this->size = $data['size'];
+        }
         $this->params = $data['params'] ?? [];
         $this->activeModal = "modal-id-" . rand();
         $this->dispatch('showBootstrapModal');
