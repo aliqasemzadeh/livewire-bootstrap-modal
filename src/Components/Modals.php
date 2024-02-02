@@ -9,6 +9,7 @@ use Livewire\Attributes\On;
 class Modals extends Component
 {
     public $alias;
+    public $size = "modal-lg";
     public $params = [];
     public $activeModal;
 
@@ -16,6 +17,7 @@ class Modals extends Component
     public function showModal($data)
     {
         $this->alias = $data['alias'];
+        $this->size = $data['size'];
         $this->params = $data['params'] ?? [];
         $this->activeModal = "modal-id-" . rand();
         $this->dispatch('showBootstrapModal');
