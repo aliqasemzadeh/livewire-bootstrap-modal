@@ -128,6 +128,16 @@ Hide the currently open modal by emitting the `hideModal` event:
 </button>
 ```
 
+### Custom modal size
+
+Now you can have custom modal size by default we use `modal-lg`:
+
+```html
+<button type="button"wire:click="$dispatch('showModal', {data: {'alias' : 'livewire.modal.user','size' :'modal-xl')">
+  {{ __('Show XL Modal') }}
+</button>
+```
+
 
 ### Dismissing Modals
 
