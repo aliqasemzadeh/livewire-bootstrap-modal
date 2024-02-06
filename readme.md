@@ -14,6 +14,7 @@ This package allows you to dynamically show your Laravel Livewire 3 components i
     - [Mount Parameters](#mount-parameters)
     - [Hiding Modals](#hiding-modals)
     - [Dispatching Modals](#dispatching-modals)
+    - [Custom modal size](#custom-modal-size)
 - [Publishing Assets](#publishing-assets)
     - [Custom View](#custom-view)
 - [Notes](#notes)
@@ -128,16 +129,6 @@ Hide the currently open modal by emitting the `hideModal` event:
 </button>
 ```
 
-### Custom modal size
-
-Now you can have custom modal size by default we use `modal-lg`:
-
-```html
-<button type="button"wire:click="$dispatch('showModal', {data: {'alias' : 'livewire.modal.user','size' :'modal-xl')">
-  {{ __('Show XL Modal') }}
-</button>
-```
-
 
 ### Dismissing Modals
 
@@ -160,6 +151,16 @@ public function save()
 
     $this->dispatch('hideModal');
 }
+```
+
+### Custom modal size
+
+Now you can have custom modal size by default we use `modal-lg`:
+
+```html
+<button type="button"wire:click="$dispatch('showModal', {data: {'alias' : 'livewire.modal.user','size' :'modal-xl')">
+  {{ __('Show XL Modal') }}
+</button>
 ```
 
 ## Publishing Assets
