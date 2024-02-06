@@ -179,6 +179,9 @@ Now edit the view file inside `resources/views/vendor/livewire-bootstrap-modal`.
 ## Notes
 
 1- You should use button or @click in main slot.
+
 2- We are working hard on some problems, We hope fix them soon.
+
 3- We will add some options soon.
+
 4- wire:navigate not work (just first modal open).
